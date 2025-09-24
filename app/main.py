@@ -6,8 +6,8 @@ class Person:
         self.age = age
         Person.people[name] = self
 
+
 def create_person_list(people: list[dict]) -> list[Person]:
-    Person.people.clear()  # ✅ Clears dictionary safely
 
     person_list = [Person(name=data["name"], age=data["age"]) for data in people]
 
